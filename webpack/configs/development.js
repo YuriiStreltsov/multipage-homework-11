@@ -21,6 +21,23 @@ module.exports = env => ({
   plugins: [
     new HtmlWebpackPlugin({
       template: './index.html',
+      filename: './index.html',
+      chunks: ['index'],
+    }),
+    new HtmlWebpackPlugin({
+      template: './pages/colorSwitch.html',
+      filename: 'colorSwitch.html',
+      chunks: ['colorSwitch'],
+    }),
+    new HtmlWebpackPlugin({
+      template: './pages/promisification.html',
+      filename: 'promisification.html',
+      chunks: ['promisification'],
+    }),
+    new HtmlWebpackPlugin({
+      template: './pages/timer.html',
+      filename: 'timer.html',
+      chunks: ['timer'],
     }),
   ],
   devServer: {
